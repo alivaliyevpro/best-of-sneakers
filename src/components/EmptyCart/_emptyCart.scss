@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+.info-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20.0625rem;
+  height: 100%;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .box-img {
+      width: 7.5rem;
+      height: 7.5rem;
+      img {
+        @include image-size;
+      }
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: $fs-l;
+      font-weight: $fw-600;
+      color: $tc-black;
+    }
+
+    p {
+      opacity: $opacity;
+      margin-bottom: 2rem;
+      font-size: $fs-s;
+      font-weight: $fw-400;
+      line-height: 1.5rem;
+      color: $tc-black;
+      text-align: center;
+    }
+
+    .go-back-btn {
+      outline: none;
+      padding-inline: 2rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 15.3125rem;
+      height: 3.4375rem;
+      background-color: $bg-green-btn;
+      border: none;
+      border-radius: 1.125rem;
+      h3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: $fs-s;
+
+        font-weight: $fw-600;
+        color: $tc-white;
+        text-align: center;
+        span {
+          width: 0.85713rem;
+          height: 0.75rem;
+          img {
+            @include image-size;
+          }
+        }
+      }
+    }
+  }
+}

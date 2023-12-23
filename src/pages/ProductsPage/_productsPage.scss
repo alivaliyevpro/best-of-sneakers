@@ -1,0 +1,85 @@
+@import "../../styles/variables";
+
+.products-container {
+  margin-inline: auto;
+  overflow: scroll;
+  width: 67.5rem;
+  height: 100vh;
+  background: $bg-white;
+  .control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+
+    h2 {
+      @include header-text;
+    }
+
+    .bars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 12.5rem;
+        height: 2.8125rem;
+        padding: 0.8rem;
+        background-color: $bg-white;
+        background-image: url("../assets/down-arrow.svg") !important;
+        background-repeat: no-repeat;
+        background-position: 11rem;
+        background-size: 0.7rem;
+        border: $border;
+        border-radius: 0.625rem;
+        font-size: 0.875rem;
+
+        font-weight: $fw-400;
+        color: $tc-gray;
+        option {
+          font-size: 0.875rem;
+
+          font-weight: $fw-400;
+          color: $tc-gray;
+        }
+      }
+
+      .search-box {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 12.5rem;
+        height: 2.8125rem;
+        padding: 0.8rem;
+        border: $border;
+        border-radius: 0.625rem;
+        .fa-search {
+          font-size: 0.875rem;
+          font-weight: $fw-400;
+          color: $tc-gray;
+        }
+
+        input {
+          width: 100%;
+          border: none;
+          font-size: 0.875rem;
+
+          font-weight: $fw-400;
+          color: $tc-gray;
+        }
+      }
+    }
+  }
+
+  .products-list {
+    padding-inline: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 3rem;
+  }
+}

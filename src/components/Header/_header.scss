@@ -1,0 +1,72 @@
+@import "../../styles/variables";
+
+header {
+  margin-inline: auto;
+  padding-inline: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 67.5rem;
+  height: 8rem;
+  margin-top: 2rem;
+  background: $bg-white;
+  border-bottom: $border;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 15.75rem;
+    height: 2.5625rem;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .logo-text {
+      h2 {
+        font-size: $fs-m;
+        font-weight: $fw-700;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: $fs-xs;
+        font-weight: $fw-400;
+        color: $tc-dark-gray;
+      }
+    }
+  }
+
+  nav {
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: transparent;
+      border: none;
+      font-size: $fs-xs;
+      font-weight: $fw-600;
+      color: $tc-very-dark-gray;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    height: 1.1875rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      p {
+        font-size: $fs-xs;
+        font-weight: $fw-600;
+        color: $tc-very-dark-gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// Variables
+
+// background-color
+$bg-white: #fff;
+$bg-green: #e9f5d2;
+$bg-green-btn: #9dd458;
+
+// border:
+$border: 1px solid #f3f3f3;
+
+// color
+$tc-black: #000;
+$tc-very-dark-gray: #5c5c5c; // nav item tex
+$tc-dark-gray: #9d9d9d; // logo text
+$tc-light-gray: #c4c4c4; // search text
+$tc-gray: #bdbdbd; // price text
+$tc-green: #87c20a;
+$tc-white: #fff;
+
+// font-size
+$fs-xs: 0.875rem;
+$fs-s: 1rem;
+$fs-m: 1.25rem;
+$fs-l: 1.375rem;
+$fs-xl: 1.5rem;
+$fs-xxl: 2rem;
+
+// font-weight
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+// line-height
+$lh-150: 1.5rem;
+
+// opacity
+$opacity: 0.4;
+
+// Mixings
+@mixin header-text {
+  font-size: $fs-xxl;
+  font-weight: $fw-700;
+}
+
+@mixin image-size {
+  width: 100%;
+  height: 100%;
+}

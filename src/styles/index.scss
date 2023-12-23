@@ -1,0 +1,30 @@
+@import "./variables";
+
+@import "../components/Header/header";
+@import "../components//ProductCard/productCard";
+@import "../components/Cart/cart";
+@import "../components/EmptyCart/emptyCart";
+@import "../components/IsProcessed/isProcessed";
+@import "../components/EmptyOrder/emptyOrder";
+@import "../components/EmptyWishlist/emptyWishlist";
+
+@import "../pages/ProductsPage/productsPage";
+@import "../pages/WishlistPage/wishlistPage";
+@import "../pages/OrdersPage/ordersPage";
+@import "../pages/ProductDetails/productDetails";
+@import "../pages/MissingPage/missingPage";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background: $bg-green;
+  font-family: "Inter", sans-serif;
+  color: $tc-black;
+}

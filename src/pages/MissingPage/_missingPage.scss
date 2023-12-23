@@ -1,0 +1,61 @@
+.missing-page {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  width: 67.5rem;
+  height: 100vh;
+  background-color: $bg-white;
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16rem;
+    height: fit-content;
+    margin-top: 15rem;
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 7rem;
+      font-weight: $fw-600;
+      text-align: center;
+    }
+
+    p {
+      opacity: $opacity;
+      margin-bottom: 2rem;
+      font-size: $fs-s;
+      font-weight: $fw-400;
+      line-height: $lh-150;
+      text-align: center;
+    }
+
+    .go-back-btn {
+      outline: none;
+      padding-inline: 2rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 3.4375rem;
+      background: #9dd458;
+      border: none;
+      border-radius: 1.125rem;
+      h3 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: $fs-s;
+
+        font-weight: $fw-600;
+        color: $tc-white;
+        text-align: center;
+        span {
+          width: 0.85713rem;
+          height: 0.75rem;
+          img {
+            @include image-size;
+          }
+        }
+      }
+    }
+  }
+}

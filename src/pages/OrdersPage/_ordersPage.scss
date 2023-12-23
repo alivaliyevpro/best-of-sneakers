@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+
+.orders-container {
+  width: 67.5rem;
+  height: 100vh;
+  background-color: $bg-white;
+  margin-inline: auto;
+  padding: 3rem;
+  overflow: scroll;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    display: flex;
+    overflow: hidden;
+
+    button {
+      border: none;
+      width: 2.1875rem;
+      height: 2.1875rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      img {
+        @include image-size;
+      }
+    }
+
+    h2 {
+      @include header-text;
+    }
+  }
+
+  .order-products {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 3rem;
+  }
+}
