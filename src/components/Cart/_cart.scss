@@ -113,7 +113,8 @@
         div {
           display: flex;
           justify-content: space-between;
-          align-items: end;
+          // align-items: end;
+          align-items: flex-end;
           p {
             font-weight: $fw-600;
             font-size: $fs-s;
@@ -139,7 +140,8 @@
       .checkout-btn {
         outline: none;
         display: flex;
-        justify-content: end;
+        // justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         gap: 6rem;
         width: 20.3125rem;

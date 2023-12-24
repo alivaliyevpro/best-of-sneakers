@@ -29,7 +29,7 @@ const ProductDetails = () => {
         <h2>Product details</h2>
       </div>
       {result
-        .filter(item => item.id == params.id)
+        .filter(item => item.id === Number(params.id))
         .map(item => {
           return (
             <div
@@ -38,7 +38,7 @@ const ProductDetails = () => {
               <div className="product-image-wrapper">
                 <img
                   src={item.image}
-                  alt="Product image"
+                  alt="Product"
                 />
               </div>
 
@@ -79,7 +79,7 @@ const ProductDetails = () => {
 
                         const removeItem = () => {
                           const index = newWishList.findIndex(
-                            el => el.id == item.id
+                            el => el.id === item.id
                           );
                           if (index !== -1) {
                             newWishList.splice(index, 1);

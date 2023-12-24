@@ -28,26 +28,36 @@ function App() {
     };
 
     fetchData();
-  }, []);
+  }, [setResult]);
 
   useEffect(() => {
+    const calcTotalAmount = () => {
+      let total = 0;
+
+      if (cart.length > 0) {
+        for (let i = 0; i < cart.length; i++) {
+          total += cart[i].price;
+        }
+      }
+      return setTotalAmount(total.toFixed(2));
+    };
     calcTotalAmount();
-  }, [cart, calcTotalAmount]);
+  }, [cart, setTotalAmount]);
 
   function assignCheckTickProperty(arr) {
     return arr.map(obj => ({ ...obj, checktick: false }));
   }
 
-  function calcTotalAmount() {
-    let total = 0;
+  // function calcTotalAmount() {
+  //   let total = 0;
 
-    if (cart.length > 0) {
-      for (let i = 0; i < cart.length; i++) {
-        total += cart[i].price;
-      }
-    }
-    return setTotalAmount(total.toFixed(2));
-  }
+  //   if (cart.length > 0) {
+  //     for (let i = 0; i < cart.length; i++) {
+  //       total += cart[i].price;
+  //     }
+  //   }
+  //   return setTotalAmount(total.toFixed(2));
+  // }
 
   return (
     <Routes>

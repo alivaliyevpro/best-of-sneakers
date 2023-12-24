@@ -9,6 +9,26 @@ import { useGlobalContext } from "../../context/context";
 const ProductCard = ({ item }) => {
   const { wishlist, setWishlist, cart, setCart } = useGlobalContext();
 
+  function handleAddToWishlist() {
+    if (!wishlist.includes(item)) {
+      setWishlist([...wishlist, item]);
+    } else {
+      let newWishList = [...wishlist];
+
+      const removeItem = () => {
+        const index = newWishList.findIndex(el => el.id === item.id);
+        if (index !== -1) {
+          newWishList.splice(index, 1);
+          return newWishList;
+        }
+      };
+
+      removeItem();
+
+      setWishlist(newWishList);
+    }
+  }
+
   function handleAddToCart() {
     item.checktick = false;
 
@@ -18,7 +38,7 @@ const ProductCard = ({ item }) => {
       let newArray = [...cart];
 
       const removeItem = () => {
-        const index = newArray.findIndex(el => el.id == item.id);
+        const index = newArray.findIndex(el => el.id === item.id);
         if (index !== -1) {
           newArray.splice(index, 1);
           return newArray;
@@ -39,7 +59,7 @@ const ProductCard = ({ item }) => {
           <img
             className="product-img"
             src={item.image}
-            alt="product image"
+            alt="product"
           />
         </div>
 
@@ -53,26 +73,7 @@ const ProductCard = ({ item }) => {
         </div>
 
         <div className="button-container">
-          <button
-            onClick={() => {
-              if (!wishlist.includes(item)) {
-                setWishlist([...wishlist, item]);
-              } else {
-                let newWishList = [...wishlist];
-
-                const removeItem = () => {
-                  const index = newWishList.findIndex(el => el.id == item.id);
-                  if (index !== -1) {
-                    newWishList.splice(index, 1);
-                    return newWishList;
-                  }
-                };
-
-                removeItem();
-
-                setWishlist(newWishList);
-              }
-            }}>
+          <button onClick={handleAddToWishlist}>
             {wishlist.includes(item) ? (
               <img
                 className="wishlist-solid-icon"

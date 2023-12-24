@@ -23,9 +23,8 @@ const ProductsPage = () => {
   const sortedProducts = filteredProducts.sort((a, b) => {
     if (sortType === "LowtoHigh") {
       return a.price - b.price;
-    } else if (sortType === "HightoLow") {
-      return b.price - a.price;
     }
+    return b.price - a.price;
   });
 
   return (

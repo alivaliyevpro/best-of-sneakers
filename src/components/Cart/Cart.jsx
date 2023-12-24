@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import removeIcon from "../../assets/remove-icon.svg";
 import rightArrowIcon from "../../assets/right-arrow.svg";
 import EmptyCart from "../EmptyCart/EmptyCart";
@@ -16,6 +16,12 @@ const Cart = () => {
     order,
     setOrder,
   } = useGlobalContext();
+
+  function PurchaseItems() {
+    setOrder([...order, cart]);
+    setCart([]);
+    setIsProcessed(true);
+  }
 
   return (
     <section className="cart-container">
@@ -39,7 +45,7 @@ const Cart = () => {
                     <div className="cart-item-img">
                       <img
                         src={item.image}
-                        alt="Product image"
+                        alt="Product"
                       />
                     </div>
                     <div className="cart-item-content">
@@ -53,7 +59,7 @@ const Cart = () => {
 
                         const removeItem = () => {
                           const index = newArray.findIndex(
-                            el => el.id == item.id
+                            el => el.id === item.id
                           );
                           if (index !== -1) {
                             newArray.splice(index, 1);
@@ -90,12 +96,7 @@ const Cart = () => {
               </div>
 
               <button
-                onClick={() => {
-                  setOrder([...order, cart]);
-                  setCart([]);
-
-                  setIsProcessed(true);
-                }}
+                onClick={PurchaseItems}
                 className="checkout-btn">
                 <p>Checkout</p>
                 <span>

@@ -260,7 +260,7 @@ header nav a p {
 .cart-container .cart-content .checkout-container .amount div {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 }
 .cart-container .cart-content .checkout-container .amount div p {
   font-weight: 600;
@@ -283,7 +283,7 @@ header nav a p {
 .cart-container .cart-content .checkout-container .checkout-btn {
   outline: none;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   gap: 6rem;
   width: 20.3125rem;
